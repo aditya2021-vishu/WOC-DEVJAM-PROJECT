@@ -1,7 +1,11 @@
+/* This style sheet is used for styling product details sections*/
+
+/*RESET CSS*/
 *{
     margin:0;
     padding:0;
 }
+/*STYLING NAVBAR*/
 html{
     scroll-behavior: smooth;
 }
@@ -16,7 +20,6 @@ html{
    border: 3px solid white;
     border-radius: 50px;
 }
- 
 .navbar{
     display: flex;
     align-items: center;
@@ -24,40 +27,31 @@ html{
     position: sticky;
     top: 0;
     cursor: pointer;
-}
-  
+} 
 .naclist{
     width: 70%;
     display: flex;
     align-items: center;
-}
-  
+} 
 .naclist li{
     list-style:none;
      padding: 26px 30px;
-}
- 
+} 
 .naclist li a{
     text-decoration: none;
     color: white;
     font-size: 20px;
     font-family: 'Ubuntu',sans-serif;
-}
-  
+} 
 .naclist li a:hover{
     text-decoration: none;
     color: grey;
 }
-
-
-
 .nnn{
     width: 10%;
     display: flex;
     align-items: center;
 }
-
-
 .nnn li{
     color: #fff;
     list-style: none;
@@ -67,20 +61,16 @@ html{
     font-size: 20px;
     font-family: 'Ubuntu',sans-serif;
 }
-
-
 .nnn li:hover > ul{
     text-decoration: none;
     color: grey;
     display: block;
 }
-
 .ddown{
     list-style: none;
     margin-top: 2%;
     display: none;
 }
-
 .ddown li {
     display: flex;
     justify-content: center;
@@ -97,7 +87,6 @@ html{
     position: relative;
     font-family: 'Courier New', Courier, monospace;
 }
-
 .ddown li:hover{
     background: rgb(85, 84, 84);
 }
@@ -123,14 +112,12 @@ html{
     text-align: right;
    padding: 0px 23px;
 }
-   
 #search{
    padding: 5px;
     font-size: 17px;
     border: 2px solid grey;
      border-radius: 9px;
 }
-
 .btnn {
     padding: 8px 20px;
     margin: 8px 3px;
@@ -159,15 +146,27 @@ html{
     z-index: -1;
     opacity: 1;
 }
-
+/*UTILITY CLASS*/
 .centre{
     color:purple;
     text-align: center;
     font-size: 45px;
     font-family:'Dancing Script';
 }
+/*STYLING SECTIONS*/
 
-
+/*setting up background image using pseudo before selector*/
+.display::before{
+    content: "";
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnZ0RwEglfOmxjlYudov0AbrgYxki5Vk3Caw&usqp=CAU') no-repeat center center/cover;
+    position: absolute;
+    height:178%;
+    width:100%;
+    top:0px;
+    left:0px;
+    z-index: -1;
+    opacity: 1;
+}
 #display_item{
     display:flex;
     flex-direction: row;
@@ -183,11 +182,13 @@ html{
 #display_item #images{
     margin-right: 0px;
     padding: 4px 0px;
-    transition: all 1.2s ease-in-out 0.2s;
+    transition: all 1.2s ease-in-out 0.2s;/*transition shorthand:-
+    transition property transition timing transition timing function transition delay*/
 }
 #display_item #images{
     width:900px;
 }
+/*setting transform property using transition*/
 #display_item #description{
     margin: 2px 20px;
     padding: 4px 20px;
@@ -208,6 +209,8 @@ html{
     transform: scale(0.95);
     cursor:zoom-out;
 }
+
+
 #display_item .heading2{
     color:brown;
     margin:15px 0px;
@@ -254,6 +257,19 @@ html{
     
     margin: 16px 0px;
 }
+/*styling size buttons*/
+.size_button .sizebtn{
+    padding: 5px 10px;
+    margin:0px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    border:1px solid black;
+    background-color:rgb(73, 243, 243);
+}
+.size_button .sizebtn:hover{
+    background-color: white;
+}
+/*styling add to cart button*/
 #display_item  .btn .cart{
     font-size: 20px;
     padding: 10px;
@@ -267,6 +283,7 @@ html{
 #display_item  .btn .cart:hover{
     background-color: green;
 }
+/*styling wishlist*/
 #display_item  .btn .wishlist{
     font-size: 20px;
     padding: 10px;
@@ -302,7 +319,7 @@ html{
 .paragraph{
     font-size: 18px;
 }
-
+/*STYLING FOOTER*/
 .bottom{
     background-color: bisque;
 }
@@ -320,15 +337,4 @@ html{
 }
 .bottom a:hover{
     color:green;
-}
-.size_button .sizebtn{
-    padding: 5px 10px;
-    margin:0px 10px;
-    cursor: pointer;
-    border-radius: 20px;
-    border:1px solid black;
-    background-color:rgb(73, 243, 243);
-}
-.size_button .sizebtn:hover{
-    background-color: white;
 }
