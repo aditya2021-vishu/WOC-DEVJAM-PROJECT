@@ -1,4 +1,4 @@
-/*This style sheet is used for styling mens wear section*/
+/*This style sheet is used for styling Womenss wear section*/
 
 /*RESET CSS*/
 *{
@@ -147,14 +147,14 @@ html{
     
 }
 #topwear{
-    margin-top: 120px;
+    margin-top: 150px;
 }
 /*setting background image using pseudo before selector*/
 #bgtop::before{
     content: "";
-    background: url('https://wallpapercave.com/wp/wp3646129.jpg') no-repeat center center/cover;
+    background: url('https://i.pinimg.com/originals/e5/e5/40/e5e54018daa8ba88d7f96fc942cd333f.jpg') no-repeat center center/cover;
     position: absolute;
-    height:600px;
+    height:640px;
     width:100%;
     top:0px;
     left:0px;
@@ -162,33 +162,33 @@ html{
     opacity: 0.99;
 }
 #bgtop .bg_item h1{
-    font-size: 85px;
-    background-color: silver;
-    color: #bc4545;
+    font-size: 100px;
+    background-color: #ebbdbdc2;
+    color: #8d4075;
     font-family: 'Pattaya', sans-serif;
-    text-shadow: 3px 3px royalblue;
+    text-shadow: 3px 3px #4181e1;
 }
 #bgtop .bg_item p{
     text-align: centre;
     font-size: 30px;
-    color:#f8caca;
+    color:#00f3ff;
     margin: 10px 0px;
     font-style: italic;
 }
 /*UTILITY CLASS
  common styling for some hedings and paragraphs*/
 .topheading{
+    margin:10px 0px;
     text-align: center;
-    color: #1dc8c0;
+    color:#ef02c7;
     font-size: 45px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Architects Daughter', cursive;
     font-weight: bold;
     background-color: black;
-    width: 50%;
-    border-radius: 50px;
+    width: 60%;
     margin: auto;
+    border-radius: 50px;
 }
-
 .text_centre{
     text-align: center;
     font-size: 25px;
@@ -199,13 +199,13 @@ html{
     font-size: 24px;
     font-weight: bold;
     text-align: left;
-    font-style: italic;
-    color:rgba(245, 222, 179, 0.95);
+    font-style: oblique;
 }
 .offer{
     text-align: center;
     font-size: 25px;
-    color:red;
+    color:#ff0000;
+    font-weight: bold;
 }
 /*STYLING SECTIONS*/
 #top1{
@@ -217,8 +217,8 @@ html{
     margin: 5px 10px;
 }
 #top1 img{
-    border-radius: 50px;
-    border:6px solid #3f7aae;
+    border-radius: 55px;
+    border:6px solid #9c53df;
     transition: all 1.1s ease-out 0.1s;
 }
 #top1 img:hover{
@@ -228,15 +228,15 @@ html{
 /*setting background image using pseudo before selector*/
 #topwear::before{
     content: "";
-    background: url('bac.jpg') no-repeat center center/cover;
+    background: url('https://previews.123rf.com/images/awrangler/awrangler1902/awrangler190200177/117394166-happy-young-fashion-woman-sitting-on-steps-stylish-female-model-wearing-gray-sleeveless-coat-and-whi.jpg') no-repeat center center/cover;
     position: absolute;
-    top:600px;
+    top:640px;
     left:0;
     bottom: 0px;
     width:100%;
-    height:321%;
+    height:325%;
     z-index: -1;
-    opacity:0.85;
+    opacity:0.8;
 }
 /*STYLING FOOTER*/
 .bottom{
