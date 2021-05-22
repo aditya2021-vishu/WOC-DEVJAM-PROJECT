@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt| PRISM</title>
+    <link rel="stylesheet" href="stylereceipt.css">
+</head>
+<body>
+    <div class="receipt">
+        <h1>PAYMENT RECEIPT</h1>
+        <table class="receipt_info">
+            <tbody>
+           <tr class="table_rows">
+               <th class="Heading" id="price">Total Price :</th>
+               <td><span id="tot_price"></span></td>
+           </tr>
+           <tr class="table_rows">
+               <th class="Heading" id="name">BRAND NAME :</th>
+               <td><span id="bar_name"></span></td>
+           </tr>
+           <tr class="table_rows" id="phonenumber">
+               <th class="Heading">PRODUCT DETAILS :</th>
+               <td><span id="pro_det"></span></td>
+           </tr>
+         <!--  <tr class="table_rows" id="E-ID">
+               <th class="Heading">E-mail ID :</th>
+               <td><span id="e_mailid"></span></td>
+           </tr>
+           <tr class="table_rows" id="address">
+                <th class="Heading">Address :</th>
+                <td><span id="user_address"></span></td>
+           </tr>
+           <tr class="table_rows" id="pincode">
+               <th class="Heading">Pin Code :</th>
+               <td><span id="area_pincode"></span></td>
+           </tr> -->
+        </tbody>
+        </table>
+        <div class="paid">Payment Successful &#9989;</div>
+       <a class="profile_edit" href="test.html" target="_blank">Home</a> 
+    </div>
+</body>
+<script>
+
+    getData();
+    async function getData(){
+    const response = await fetch('/rain');
+    const datas = await response.json();
+    console.log(datas);
+
+    let paianikal = datas.money;
+    document.getElementById('tot_price').textContent = paianikal;
+    let bran_nm = datas.bar;
+    document.getElementById('bar_name').textContent = bran_nm;
+    let pr_detail = datas.det;
+    document.getElementById('pro_det').textContent = pr_detail;
+    
+    }
+
+
+</script>
+</html>

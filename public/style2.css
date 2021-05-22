@@ -1,0 +1,491 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        
+*{
+    margin: 0;
+   padding: 0px;
+}
+ 
+html{
+    scroll-behavior: smooth;
+}
+.box{
+    border-radius: 6px;
+}
+.box{
+    background-color:rgba(117, 117, 117, 0.733);
+    position: fixed;
+    height: 16px;
+   width: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    font-size: 1px;
+    transition-property: all;
+    transition-duration: 4s;
+   transition-timing-function: ease-out;
+    background: url(/img/11img.jpg);
+    background-size: cover;
+}
+.box:hover{
+    background-color: rgb(83, 105, 105);
+    color: skyblue;
+    text-shadow: 4px 4px 2px rgb(66, 49, 49);
+    height: 200px;
+    width: 200px;
+    border-radius: 45px;
+    font-size: 20px;
+}
+.box-1{
+    top: 80px;}
+ 
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 33%;
+   border: 3px solid white;
+    border-radius: 50px;
+}
+ 
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+  
+.naclist{
+    width: 70%;
+    /*background-color: black;*/
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}
+  
+.naclist li{
+    list-style:none;
+     padding: 26px 30px;
+}
+ 
+.naclist li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Ubuntu',sans-serif;
+}
+  
+.naclist li a:hover{
+    text-decoration: none;
+    color: grey;
+}
+
+
+
+.nnn{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+
+.nnn li{
+    color: #fff;
+    list-style: none;
+    padding: 26px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Ubuntu',sans-serif;
+}
+
+
+.nnn li:hover > ul{
+    text-decoration: none;
+    color: grey;
+    display: block;
+}
+
+.ddown{
+    list-style: none;
+    margin-top: 2%;
+    display: none;
+}
+
+.ddown li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #262626;
+    width: 195px;
+    border: 1px solid #fff;
+    height: 0px;
+    line-height: 10px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ddown li:hover{
+    background: rgb(85, 84, 84);
+}
+
+.ddown li a{
+    list-style:none;
+     padding: 26px 30px;
+}
+ 
+.ddown li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Ubuntu',sans-serif;
+}
+  
+.ddown li a:hover{
+    text-decoration: none;
+    color: grey;
+}
+
+
+    
+.rightnav{
+    /*background-color: antiquewhite;*/
+    width: 30%;
+    text-align: right;
+   padding: 0px 23px;
+}
+   
+#search{
+   padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+     border-radius: 9px;
+}
+
+.btn {
+    padding: 8px 20px;
+    margin: 8px 3px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 16.5px;
+    background: none;
+    color: rgba(247, 244, 240, 0.89);
+    cursor: pointer;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 20px;
+}
+
+
+.background{
+    background: rgba(0,0,0,0.7) url(/img/all1bg.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.background1{
+    background: rgba(0,0,0,0.7) url(/img/2.0bg2.png);
+    background-size: cover;
+   /* background-blend-mode: darken;*/
+}
+
+ .firstsection{
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+.firstsection h1{
+    text-align: center;
+    text-align: justify;
+    font-size: 70px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+    color: rgb(0 250 250);
+    background-color: black;
+}
+
+.section-flex{
+    background: rgba(0,0,0,0.7) url(https://i.pinimg.com/originals/72/d7/85/72d785eb45780c182c4a577dc27b67ed.jpg);
+    background-size: cover;
+    /*background-blend-mode:darken;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.offers{
+    height: 550px;
+    width: 90%;
+    margin: auto;    
+}
+
+.offers h2{
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 36px;
+    background-color: #989ba3;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+
+.flex-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec1{
+    display: inline-block;
+    /* border: 8px solid rgb(37, 30, 30); */
+    border-radius: 30px;
+    width: 290px;
+    margin: 23px 22px;
+    height: 390px;
+}
+
+.img-container{
+    width: inherit;
+    height: auto;
+}
+.text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 100;
+    font-size: 20px;
+}
+.text-container h1{
+    color: black;
+}
+p{
+    color: black;
+    font-family: 'Dancing Script', cursive;
+   /* font-family: 'Ubuntu',sans-serif;*/
+}
+
+.bot{
+    outline: none;
+    border: 10px solid #404B69;
+    font-size: 5rem;
+    font-family: 'Arvo', cursive;
+    line-height: 2;
+    font-weight: 900;
+    color: #DA0463;
+    text-shadow: 3px 0 #DBEDF3;
+    border-radius: 150px;
+    display: inline-block;
+    width: inherit;
+    height: 290px;
+    text-align: center;
+    margin: 0px;
+    background-color: white;
+    transition-property: all;
+    transition-duration: 0.1s;
+  }
+
+  .bot:hover{
+    /*background-color: rgb(83, 105, 105);
+    color: skyblue;
+    text-shadow: 4px 4px 2px rgb(66, 49, 49);*/
+    height: 300px;
+    width: 300px;
+    /*border-radius: 45px;
+    font-size: 20px;*/
+}
+
+.b1{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13837784/2021/4/7/f5928d17-1fb9-41eb-90ce-115a468d7e6c1617797757461TommyHilfigerBoysGreyBrandLogoPrintedPureCottonRoundNeckT-sh1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b2{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13430774/2021/3/9/ffd9788f-4f46-496d-86fe-56c5774450ce1615273017320-HRX-by-Hrithik-Roshan-Boys-Black--Grey-Abstract-Print-Rapid--1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b3{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13837758/2021/3/23/7c3ecfe7-1101-449f-b4cd-d1157e749f3b1616492312239TommyHilfigerBoysBlueCheckedReversibleRegularFitPureCottonCa2.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b4{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/7/28/471f7680-f35c-4f61-94a4-09e47b8a37c61595888579510-1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b5{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/1/21/72c3e952-99c1-46c0-a0c5-0188babe0aaa1611233451999-1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b6{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/2/22/76e8a714-ad08-49a9-be40-3c602abb5fea1613984106874-1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b7{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/12/24/c54b9584-3d82-4b51-8e06-d11c09b2e5bb1608793893551-1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b8{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/4/7/74782b84-9778-433a-abfd-c9351d3ae7011617797270018-1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b9{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13837756/2021/4/7/d084b0fd-b0c9-4d0d-af3f-bd6e792e77751617797790638TommyHilfigerGirlsBlueSolidPinaforeDenimDress1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b10{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13837676/2021/4/7/7d00a474-de73-4622-8319-46edc09613a31617797809001TommyHilfigerGirlsNavyBluePrintedKGSLSHARRONFitandFlareDress1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b11{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13837006/2021/4/7/b36e248a-9ee5-4a96-b936-5fae83b0dbcd1617797783712TommyHilfigerGirlsBlueRegularFitMid-RiseCleanLookPrintedStre1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b12{
+    background-image: url('https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11673386/2020/11/5/72ec43d8-32e9-4f60-995e-070b7cccd87b1604550709248ADIDASGirlsPeach-ColouredWhiteBadgesBrandLogoPrintRoundNeckT1.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+
+
+
+
+
+
+.flx-box{
+   /* background: rgba(0,0,0,0.7) url(/img/4kbg.jpg);
+    background-size: cover;
+    background-blend-mode:darken;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-deals{
+    height: 746px;
+    width: 98%;
+    margin: auto;    
+}
+
+.big-deals h1{
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 36px;
+    background-color: #989ba3;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.F-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2{
+    display: inline-block;
+    /* border: 8px solid rgb(37, 30, 30); */
+    border-radius: 30px;
+    width: 745px;
+    /*margin: 23px 22px;*/
+    height: 745px;
+}
+
+.Image-Container{
+    width: inherit;
+    height: auto;
+}
+
+.button-Section{
+   /* outline: none;
+    border: 10px solid #404B69;
+    font-size: 5rem;
+    font-family: 'Arvo', cursive;
+    line-height: 2;
+    font-weight: 900;
+    color: #DA0463;
+    text-shadow: 3px 0 #DBEDF3;
+    border-radius: 150px;*/
+    display: inline-block;
+    width: inherit;
+    height: 745px;
+    text-align: center;
+    margin: 0px;
+    background-color: white;
+    transition-property: all;
+    transition-duration: 0.1s;
+  }
+
+  .button-Section:hover{
+
+    height: 749px;
+    width: 749px;
+
+}
+
+.b13{
+    background-image: url('/img/1big.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b14{
+    background-image: url('/img/2big.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b15{
+    background-image: url('/img/3big.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+.b16{
+    background-image: url('/img/4big.jpg');
+    cursor: pointer;
+    background-size: cover;
+}
+
+#footer{
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}

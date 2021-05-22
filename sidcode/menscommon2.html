@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRISM SHOP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styledisplay1.css">
+                                                                                                                                                                                
+</head>
+<body>
+    <nav class="navbar background">
+        <ul class="naclist another">
+            <div class="logo"><img src="logo.png" alt="logo"></div>
+            <li> <a href="test.html">Home</a></li>
+            <li> <a href="#sale">HurryUp!</a></li>
+            <li> <a href="#brand">Trending</a></li>
+            <li> <a href="#topbrand">Top Brands</a></li>
+            <li> <a href="index.html">Login/SignUp</a></li>
+            <li> <a href="profile.html" target="_blank">Profile</a></li>
+        </ul>
+        <div class="rightnav v-class-resp">
+        <ul class="nnn">
+            <li>Explore more
+                <ul class="ddown">
+                    <li> <a href="menswear.html" target="_blank">Mens Wear</a></li>
+                    <li> <a href="womenswear.html" target="_blank">Womens Wear</a></li>
+                    <li> <a href="test2.html" target="_blank">Kids Wear</a></li>
+                    <li> <a href="test1.html" target="_blank">Electronics</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <section class="display">
+        <div id="display_item">
+            <div class="item" id="images">
+                <img id="img1" src="image/shirt1.webp" alt="img">
+                <img id="img2" src="image/shirt2.webp" alt="img">
+                <img id="img3" src="image/shirt3.webp" alt="img">
+                <img id="img4" src="image/shirt4.webp" alt="img">
+            </div>
+                <div class="item" id="description">
+                 <h1 class="heading-1 centre">DETAILS</h1>
+                 <h2 class="heading2" id="appn">ROADSTER</h2>
+                 <p id="productdetails">Men Black & Khaki Regular Fit Checked Reversible Casual Shirt</p>
+                 <h1 id="paisa">Rs. 999 <em class="offer"></em></h1>
+                 <h1><em class="offer">20%off</em></h1>
+                 <p id="tax">inclusive of all taxes</p>
+                 <hr>
+                 <hr>
+                 <h2> SELECT SIZE</h2>
+                 <div class="size_button">
+                 <input class="sizebtn" type="button" value="36">
+                 <input class="sizebtn" type="button" value="38">
+                 <input class="sizebtn" type="button" value="40">
+                 <input class="sizebtn" type="button" value="42">
+                 <input class="sizebtn" type="button" value="44">
+                </div>
+                 <div class="btn">
+                 <h2>DELIVERY OPTION</h2>
+                 <a href="payment.html" class="click" id="abmkl" onclick="toggleHide()" target="blank">
+                    PAY NOW &#128260
+                 </a>
+                 <div id="para">
+                 <p class="paragraph">100% Original Products</p>
+                 <p class="paragraph">Pay on delivery might be available</p>
+                 <p class="paragraph">Easy 15 days returns and exchanges</p>
+                 <p class="paragraph">Try & Buy might be available</p>
+                </div>
+                <h2>BEST OFFERS</h2>
+                <h3>BEST PRICE:: <em class="offer">Rs. 649</em></h3>
+                <ul>
+                    <li class="offer_item">Applicable on: Order above Rs. 2599 (Only on first Purchase)</li>
+                    <li class="offer_item">Coupon code: <em class="offer">PRISM200</em></li>
+                    <li class="offer_item">Max Discount: Rs. 400 off (check cart for final savings)</li>
+                </ul>
+                <h2>PRODUCT DETAILS</h2>
+                <p class="paragraph">Black and Khaki Checked Reversible Casual Shirt</p>
+                 <p class="paragraph">Black and Khaki Checked Reversible Shirt,has a Spread Collar ,snap button</p>
+                 <p class="paragraph">Placket, 1 pocket, long Sleeves, Curved hem</p>
+                 <p class="paragraph">Black Casual Shirt, has a spread Collar, snap button placket, 1 pocket</p>
+                 <p class="paragraph">,long sleeves,curved hem</p>
+                </div>
+                <h3>Size & Fit</h3>
+                <p class="paragraph">Regular Fit </p>
+                 <p class="paragraph">The Model (height 6') is wearing size 40</p>
+                 <h3>Material & Care</h3>
+                 <p class="paragraph">100% Cotton</p>
+                 <p class="paragraph">Machine-Wash</p>
+            </div>
+        </div>
+    </section>
+    <p><span id="bran"></span></p>
+    <p><span id="money"></span></p>
+    <p><span id="productdetail"></span></p>
+    <footer class="bottom">
+        <p>"Happiness is not in money but in shoping"</p>
+        <p>-MERILYN MONROE</p>
+        <a href="#">&copy; 2021|PRISM</a>
+    </footer>
+</body>
+<script>
+
+
+
+    function toggleHide(){
+          let  abmkl = document.getElementById('abmkl');
+          let  paisa = document.getElementById('paisa');
+          let  productdetails = document.getElementById('productdetails');
+          let  appn = document.getElementById('appn');
+          console.log(paisa);
+          console.log(productdetails);
+          console.log(appn);
+          const money = paisa.innerText;
+          document.getElementById('money').textContent = money;
+          const det = productdetails.innerText;
+          document.getElementById('productdetail').textContent = det;
+          const bar = appn.innerText;
+          document.getElementById('bran').textContent = bar;
+         const datas = {money,det,bar};
+         const options = {
+             method: 'POST',
+             headers:{
+                'Content-Type':'application/json'
+               //"Content-Type": "application/x-www-form-urlencoded",
+             },
+             body: JSON.stringify(datas)
+         };
+        fetch('/rain', options).then(Response =>{
+            console.log(Response);
+         });
+    }
+    
+    
+    </script>
+</html>

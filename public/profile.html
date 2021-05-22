@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile| PRISM</title>
+    <link rel="stylesheet" href="styleprofile.css">
+</head>
+<body>
+    <div class="profile">
+        <h1>PROFILE DETAILS</h1>
+        <table class="profile_info">
+            <hr>
+            <tbody>
+           <tr class="table_rows">
+               <th class="Heading" id="name">Full Name :</th>
+               <td><span id="nam"></span></td>
+           </tr>
+           <tr class="table_rows">
+               <th class="Heading" id="age">Age :</th>
+               <td><span id="userage"></span></span></td>
+           </tr>
+           <tr class="table_rows" id="gender">
+               <th class="Heading">Gender :</th>
+               <td><span id="gen"></span></td>
+           </tr>
+           <tr class="table_rows" id="mobile_number">
+               <th class="Heading">Mobile Number :</th>
+               <td><span id="mobile_no"></span></td>
+           </tr>
+           <tr class="table_rows" id="E-ID">
+                <th class="Heading">Email ID :</th>
+                <td><span id="email_add"></span></td>
+           </tr>
+           <tr class="table_rows" id="address">
+               <th class="Heading">Address :</th>
+               <td><span id="user_addr"></span></td>
+           </tr>
+        </tbody>
+        </table>
+        <a href="test.html">
+        <div class="profile_edit"><input class="btn" type="button" value="HOME"></div>
+        </a>
+    </div>
+</body>
+<script>
+    getData();
+    async function getData(){
+    const response = await fetch('/api');
+    const data = await response.json();
+    console.log(data);
+    //let ndata = JSON.stringify(data);
+    //console.log(ndata);
+    //let brandname = document.write(data.bar);
+    //let productprice = document.write(data.money);
+    //document.getElementById('bran').textContent = brandname;
+    // document.getElementById('money').textContent = money;
+    let accha = data.name;
+    document.getElementById('nam').textContent = accha;
+    let paianikal = data.age;
+    document.getElementById('userage').textContent = paianikal;
+    let detal = data.gender;
+    document.getElementById('gen').textContent = detal;
+    let numb = data.number;
+    document.getElementById('mobile_no').textContent = numb;
+    let emal = data.email;
+    document.getElementById('email_add').textContent = emal;
+    let addr = data.address;
+    document.getElementById('user_addr').textContent = addr;
+    }
+</script>
+
+
+
+</html>

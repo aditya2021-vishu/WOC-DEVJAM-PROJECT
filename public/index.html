@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAB CHILL HAI</title>
+    <link rel="stylesheet" href="stylish.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>LOGIN TO PRISM </h1>
+
+
+      <!--  <form class="form" id="myform">
+            <label for="inp_username">Username</label>
+            <input type="text" name="inp_username" id="inp_username">
+            <button type="submit">login</button>
+        </form> -->
+        <form class="form" id="myform">
+            <input type="text" name="name" id="name" placeholder="enter your name" required>
+            <input type="number" name="age" id="age" placeholder="enter your age" required>
+            <input type="text" name="gender" id="gender" placeholder="enter your gender" required>
+            <input type="number" name="number" id="number" placeholder="enter your mobile number" required>
+            <input type="email" name="email" id="email" placeholder="enter your email address" required>
+            <textarea name="address" id="address" cols="30" rows="10" placeholder="enter your address" required></textarea>
+            <button class="btn">Submit</button>
+        </form>
+        <a href="test.html" target="_blank">
+        <button class="btn">Home</button>
+        </a>
+    </div>
+    <script>
+const myform = document.getElementById('myform');
+        
+myform.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const searchParams = new URLSearchParams();
+
+    for (const pair of formData){
+        searchParams.append(pair[0],pair[1],pair[2],pair[3],pair[4],pair[5]);
+    }
+
+
+
+    fetch('/api',{
+        method:'post',
+        body:searchParams
+    }).then(function(response){
+        return response.text();
+    }).then(function(text){
+        console.log(text);
+    })
+    console.log(formData);
+});
+    </script>
+</body>
+</html>

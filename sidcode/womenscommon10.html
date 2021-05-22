@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRISM SHOP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styledisplay1.css">
+                                                                                                                                                                                
+</head>
+<body>
+    <nav class="navbar background">
+        <ul class="naclist another">
+            <div class="logo"><img src="logo.png" alt="logo"></div>
+            <li> <a href="test.html">Home</a></li>
+            <li> <a href="#sale">HurryUp!</a></li>
+            <li> <a href="#brand">Trending</a></li>
+            <li> <a href="#topbrand">Top Brands</a></li>
+            <li> <a href="index.html">Login/SignUp</a></li>
+            <li> <a href="profile.html" target="_blank">Profile</a></li>
+        </ul>
+        <div class="rightnav v-class-resp">
+        <ul class="nnn">
+            <li>Explore more
+                <ul class="ddown">
+                    <li> <a href="menswear.html" target="_blank">Mens Wear</a></li>
+                    <li> <a href="womenswear.html" target="_blank">Womens Wear</a></li>
+                    <li> <a href="test2.html" target="_blank">Kids Wear</a></li>
+                    <li> <a href="test1.html" target="_blank">Electronics</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <section class="display">
+        <div id="display_item">
+            <div class="item" id="images">
+                <img id="img1" src="image/hill1.webp" alt="img">
+                <img id="img2" src="image/hill2.webp" alt="img">
+                <img id="img3" src="image/hill3.webp" alt="img">
+                <img id="img4" src="image/hill4.webp" alt="img">
+            </div>
+                <div class="item" id="description">
+                 <h1 class="heading-1 centre">DETAILS</h1>
+                 <h2 class="heading2" id="appn">DRESSBERRY</h2>
+                 <p id="productdetails">Women Maroon Solid Velvet Finish Pumps</p>
+                 <h1 id="paisa">Rs. 1999 <em class="offer"></em></h1>
+                 <h1><em class="offer">(30% OFF)</em></h1>
+                 <p id="tax">inclusive of all taxes</p>
+                 <hr>
+                 <hr>
+                 <h2> SELECT SIZE (EURO SIZE)</h2>
+                 <div class="size_button">
+                 <input class="sizebtn" type="button" value="36">
+                 <input class="sizebtn" type="button" value="37">
+                 <input class="sizebtn" type="button" value="38">
+                 <input class="sizebtn" type="button" value="39">
+                 <input class="sizebtn" type="button" value="40">
+                 <input class="sizebtn" type="button" value="41">
+                </div>
+                 <div class="btn">
+                 <h2>DELIVERY OPTION</h2>
+                 <a href="payment.html" class="click" id="abmkl" onclick="toggleHide()" target="blank">
+                    PAY NOW &#128260
+                    </a>
+                 <div id="para">
+                 <p class="paragraph">100% Original Products</p>
+                 <p class="paragraph">Pay on delivery might be available</p>
+                 <p class="paragraph">Easy 15 days returns and exchanges</p>
+                 <p class="paragraph">Try & Buy might be available</p>
+                </div>
+                <h2>BEST OFFERS</h2>
+                <ul>
+                    <li class="offer_item">This product is already at its best price</li>
+                </ul>
+                <h2>PRODUCT DETAILS</h2>
+                <p class="paragraph">A pair of maroon pointed toe pumps, has regular styling, closed back detail</p>
+                 <p class="paragraph">Synthetic upper</p>
+                 <p class="paragraph">Cushioned footbed</p>
+                 <p class="paragraph">Textured and patterned outsole, has a stiletto heel</p>
+                 <p class="paragraph">Warranty: 3 months</p>
+                 <p class="paragraph">Warranty provided by Brand Owner / Manufacturer</p>
+                <h3>SIZE & FIT</h3>
+                <p class="paragraph">Heel height: 8.89 cm(3.5 inches)</p>
+                 <h3>Material & Care</h3>
+                 <p class="paragraph">Synthetic</p>
+                 <p class="paragraph">Wipe with a clean, dry cloth to remove dust</p>
+            </div>
+        </div>
+    </section>
+    <p><span id="bran"></span></p>
+    <p><span id="money"></span></p>
+    <p><span id="productdetail"></span></p>
+    <footer class="bottom">
+        <p>"Happiness is not in money but in shoping"</p>
+        <p>-MERILYN MONROE</p>
+        <a href="#">&copy; 2021|PRISM</a>
+    </footer>
+</body>
+<script>
+    function toggleHide(){
+          let  abmkl = document.getElementById('abmkl');
+          let  paisa = document.getElementById('paisa');
+          let  productdetails = document.getElementById('productdetails');
+          let  appn = document.getElementById('appn');
+          console.log(paisa);
+          console.log(productdetails);
+          console.log(appn);
+          const money = paisa.innerText;
+          document.getElementById('money').textContent = money;
+          const det = productdetails.innerText;
+          document.getElementById('productdetail').textContent = det;
+          const bar = appn.innerText;
+          document.getElementById('bran').textContent = bar;
+         const datas = {money,det,bar};
+         const options = {
+             method: 'POST',
+             headers:{
+                'Content-Type':'application/json'
+               //"Content-Type": "application/x-www-form-urlencoded",
+             },
+             body: JSON.stringify(datas)
+         };
+        fetch('/rain', options).then(Response =>{
+            console.log(Response);
+         });
+    }
+    </script>
+</html>

@@ -1,0 +1,49 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+*::before{
+    content: "";
+    background: url('https://static.vecteezy.com/system/resources/previews/001/937/907/non_2x/islamic-background-ramadan-kareem-eid-mubarak-with-bokeh-light-illustration-vector.jpg') no-repeat center center/cover;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+.profile{
+    display: flex;
+    margin:auto;
+    flex-direction: column;
+    padding: 0px 110px;
+}
+.profile h1{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 50px;
+    color:black;
+}
+.profile_info{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 25px 200px;
+    margin-top: 25px;
+}
+.Heading{
+    padding: 20px 0px;
+    font-size: 20px;
+}
+    
+.btn{
+    display: block;
+    margin: auto;
+    padding: 10px 100px;
+    background-color: #FF3F6C;
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+    border: none;
+}

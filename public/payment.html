@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAB CHILL HAI</title>
+    <link rel="stylesheet" href="styleRockss.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>PAY NOW </h1>
+
+        </form> -->
+        <p>ITEM PRICE: <span id="pesa"></span></p>
+        <form class="form" id="myform">
+            <input type="text" name="name" id="name" placeholder="enter your full name" required>
+            <input type="number" name="number" id="number" placeholder="enter your mobile number" required>
+            <input type="email" name="email" id="email" placeholder="enter your email address" required>
+            <textarea name="address" id="address" cols="30" rows="10" placeholder="enter your address" required></textarea>
+            <input type="number" name="pincode" id="pincode" placeholder="Area pincode" required>
+            <p>
+                <select name="card_type" id="card_type" required>
+                    <option value="">--Select a class Type</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Rupay">Rupay</option>
+                    <option value="MasterCard">MasterCard</option>
+                </select>
+            </p>
+            <input type="number" name="card_number" id="card_number" placeholder="Card Number" required> 
+            <input type="date" name="exp_date" id="exp_date" placeholder="Expiration Date" required>
+            <input type="password" name="cvv" id="cvv" placeholder="CVV" required>
+
+            <button class="btn">Submit</button>
+        </form>
+        <a href="receipt.html" target="_blank" id="rarp">
+        <button class="btn">Reciept</button>
+        </a>
+    </div>
+    <script>
+const myform = document.getElementById('myform');
+        
+myform.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const searchParams = new URLSearchParams();
+
+    for (const pair of formData){
+        searchParams.append(pair[0],pair[1],pair[2],pair[3],pair[4],pair[5],pair[6],pair[7]);
+    }
+    fetch('/apit',{
+        method:'post',
+        body:searchParams
+    }).then(function(response){
+        return response.text();
+    }).then(function(text){
+        console.log(text);
+    })
+    console.log(formData);
+});
+
+function toggleHide(){
+    let  abmkl = document.getElementById('rarp');
+    let  paisa = document.getElementById('paisa');
+}
+
+
+
+
+
+
+
+
+    getData();
+    async function getData(){
+    const response = await fetch('/rain');
+    const datas = await response.json();
+    console.log(datas);
+
+    let paianikal = datas.money;
+    document.getElementById('pesa').textContent = paianikal;
+    
+    }
+
+    </script>
+</body>
+</html>
