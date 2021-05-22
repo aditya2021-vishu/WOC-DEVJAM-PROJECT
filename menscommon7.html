@@ -6,33 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRISM SHOP</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styledisplay.css">
+    <link rel="stylesheet" href="styledisplay1.css">
                                                                                                                                                                                 
 </head>
 <body>
-    <nav class="navbar background h-nav-resp">
-        <ul class="naclist another v-class-resp">
+    <nav class="navbar background">
+        <ul class="naclist another">
             <div class="logo"><img src="logo.png" alt="logo"></div>
             <li> <a href="test.html">Home</a></li>
             <li> <a href="#sale">HurryUp!</a></li>
             <li> <a href="#brand">Trending</a></li>
             <li> <a href="#topbrand">Top Brands</a></li>
-            <li> <a href="#contact">Contacts</a></li>
+            <li> <a href="index.html">Login/SignUp</a></li>
+            <li> <a href="profile.html" target="_blank">Profile</a></li>
         </ul>
+        <div class="rightnav v-class-resp">
         <ul class="nnn">
             <li>Explore more
                 <ul class="ddown">
                     <li> <a href="menswear.html" target="_blank">Mens Wear</a></li>
-                    <li> <a href="#">Womens Wear</a></li>
+                    <li> <a href="womenswear.html" target="_blank">Womens Wear</a></li>
                     <li> <a href="test2.html" target="_blank">Kids Wear</a></li>
                     <li> <a href="test1.html" target="_blank">Electronics</a></li>
                 </ul>
             </li>
         </ul>
-        <div class="rightnav v-class-resp">
-            <input type="text" name="search" id="search">
-            <button class="btnn btn-sm">Search</button>
         </div>
+        
         <div class="burger">
             <div class="line"></div>
             <div class="line"></div>
@@ -42,16 +42,17 @@
     <section class="display">
         <div id="display_item">
             <div class="item" id="images">
-                <img id="img1" src="short1.webp" alt="img">
-                <img id="img2" src="short2.webp" alt="img">
-                <img id="img3" src="short3.webp" alt="img">
-                <img id="img4" src="short4.webp" alt="img">
+                <img id="img1" src="image/short1.webp" alt="img">
+                <img id="img2" src="image/short2.webp" alt="img">
+                <img id="img3" src="image/short3.webp" alt="img">
+                <img id="img4" src="image/short4.webp" alt="img">
             </div>
                 <div class="item" id="description">
                  <h1 class="heading-1 centre">DETAILS</h1>
-                 <h2 class="heading2">SAPPER</h2>
-                 <p>Men Grey Printed Slim Fit Cargo Shorts</p>
-                 <h1>Rs. 1149 <em class="offer">(50% OFF)</em></h1>
+                 <h2 class="heading2" id="appn">SAPPER</h2>
+                 <p id="productdetails">Men Grey Printed Slim Fit Cargo Shorts</p>
+                 <h1>Rs. 1149 <em class="offer"></em></h1>
+                 <h1><em class="offer">(50% OFF)</em></h1>
                  <p id="tax">inclusive of all taxes</p>
                  <hr>
                  <hr>
@@ -63,12 +64,11 @@
                  <input class="sizebtn" type="button" value="34">
                  <input class="sizebtn" type="button" value="36">
                 </div>
-                 <div class="btn">
-                 <input class="cart" type="button" value="&#128274 ADD TO CART">
-                 <input class="wishlist" type="button" value="&#128151 WISHLIST">
-                 
+                 <div class="btn"> 
                  <h2>DELIVERY OPTION</h2>
-                 <input class="click" type="button" value="CLICKE HERE &#128260">
+                 <a href="payment.html" class="click" id="abmkl" onclick="toggleHide()" target="blank">
+                    PAY NOW &#128260
+                    </a>
                  <div id="para">
                  <p class="paragraph">100% Original Products</p>
                  <p class="paragraph">Pay on delivery might be available</p>
@@ -94,10 +94,42 @@
             </div>
         </div>
     </section>
+    <p><span id="bran"></span></p>
+    <p><span id="money"></span></p>
+    <p><span id="productdetail"></span></p>
     <footer class="bottom">
         <p>"Happiness is not in money but in shoping"</p>
         <p>-MERILYN MONROE</p>
         <a href="#">&copy; 2021|PRISM</a>
     </footer>
 </body>
+<script>
+    function toggleHide(){
+          let  abmkl = document.getElementById('abmkl');
+          let  paisa = document.getElementById('paisa');
+          let  productdetails = document.getElementById('productdetails');
+          let  appn = document.getElementById('appn');
+          console.log(paisa);
+          console.log(productdetails);
+          console.log(appn);
+          const money = paisa.innerText;
+          document.getElementById('money').textContent = money;
+          const det = productdetails.innerText;
+          document.getElementById('productdetail').textContent = det;
+          const bar = appn.innerText;
+          document.getElementById('bran').textContent = bar;
+         const datas = {money,det,bar};
+         const options = {
+             method: 'POST',
+             headers:{
+                'Content-Type':'application/json'
+               //"Content-Type": "application/x-www-form-urlencoded",
+             },
+             body: JSON.stringify(datas)
+         };
+        fetch('/rain', options).then(Response =>{
+            console.log(Response);
+         });
+    }
+    </script>
 </html>

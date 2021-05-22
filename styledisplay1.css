@@ -20,6 +20,7 @@ html{
    border: 3px solid white;
     border-radius: 50px;
 }
+ 
 .navbar{
     display: flex;
     align-items: center;
@@ -27,31 +28,40 @@ html{
     position: sticky;
     top: 0;
     cursor: pointer;
-} 
+}
+  
 .naclist{
     width: 70%;
     display: flex;
     align-items: center;
-} 
+}
+  
 .naclist li{
     list-style:none;
      padding: 26px 30px;
-} 
+}
+ 
 .naclist li a{
     text-decoration: none;
     color: white;
     font-size: 20px;
     font-family: 'Ubuntu',sans-serif;
-} 
+}
+  
 .naclist li a:hover{
     text-decoration: none;
     color: grey;
 }
+
+
+
 .nnn{
     width: 10%;
     display: flex;
     align-items: center;
 }
+
+
 .nnn li{
     color: #fff;
     list-style: none;
@@ -61,16 +71,20 @@ html{
     font-size: 20px;
     font-family: 'Ubuntu',sans-serif;
 }
+
+
 .nnn li:hover > ul{
     text-decoration: none;
     color: grey;
     display: block;
 }
+
 .ddown{
     list-style: none;
     margin-top: 2%;
     display: none;
 }
+
 .ddown li {
     display: flex;
     justify-content: center;
@@ -87,6 +101,7 @@ html{
     position: relative;
     font-family: 'Courier New', Courier, monospace;
 }
+
 .ddown li:hover{
     background: rgb(85, 84, 84);
 }
@@ -112,28 +127,11 @@ html{
     text-align: right;
    padding: 0px 23px;
 }
-#search{
-   padding: 5px;
-    font-size: 17px;
-    border: 2px solid grey;
-     border-radius: 9px;
-}
-.btnn {
-    padding: 8px 20px;
-    margin: 8px 3px;
-    border: 2px solid white;
-    border-radius: 8px;
-    font-size: 16.5px;
-    background: none;
-    color: rgba(247, 244, 240, 0.89);
-    cursor: pointer;
-    font-family: 'Ubuntu',sans-serif;
-    font-size: 20px;
-}
 .background{
     background: rgba(0,0,0,0.8);
     background-size: cover;
     background-blend-mode: darken;
+
 }
 .display::before{
     content: "";
@@ -269,39 +267,15 @@ html{
 .size_button .sizebtn:hover{
     background-color: white;
 }
-/*styling add to cart button*/
-#display_item  .btn .cart{
-    font-size: 20px;
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 3px solid black;
-    background-color:rgb(252, 58, 91);
-    cursor: pointer;
-}
-#display_item  .btn .cart:hover{
-    background-color: green;
-}
-/*styling wishlist*/
-#display_item  .btn .wishlist{
-    font-size: 20px;
-    padding: 10px;
-    color:black;
-    border-radius: 5px;
-    border: 1px solid white;  
-    cursor: pointer;
-}
-#display_item  .btn .wishlist:hover{
-    background-color: aqua;
-}
 #display_item  .btn .click{
-    font-size: 15px;
-    padding: 10px;
-    color:black;
+    font-size: 30px;
+    padding: 16px;
+    color: black;
     border-radius: 5px;
-    border: 1px solid white;  
+    border: 3px solid #fefefe;
     cursor: pointer;
+    text-decoration: none;
+    background-color: #008057;
 }
 #display_item  .btn .click:hover{
     background-color: rebeccapurple;

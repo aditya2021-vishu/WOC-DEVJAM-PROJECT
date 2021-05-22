@@ -20,6 +20,7 @@ html{
    border: 3px solid white;
     border-radius: 50px;
 }
+ 
 .navbar{
     display: flex;
     align-items: center;
@@ -34,6 +35,7 @@ html{
     display: flex;
     align-items: center;
 }
+  
 .naclist li{
     list-style:none;
      padding: 26px 30px;
@@ -44,16 +46,22 @@ html{
     color: white;
     font-size: 20px;
     font-family: 'Ubuntu',sans-serif;
-} 
+}
+  
 .naclist li a:hover{
     text-decoration: none;
     color: grey;
 }
+
+
+
 .nnn{
     width: 10%;
     display: flex;
     align-items: center;
 }
+
+
 .nnn li{
     color: #fff;
     list-style: none;
@@ -63,16 +71,20 @@ html{
     font-size: 20px;
     font-family: 'Ubuntu',sans-serif;
 }
+
+
 .nnn li:hover > ul{
     text-decoration: none;
     color: grey;
     display: block;
 }
+
 .ddown{
     list-style: none;
     margin-top: 2%;
     display: none;
 }
+
 .ddown li {
     display: flex;
     justify-content: center;
@@ -89,51 +101,37 @@ html{
     position: relative;
     font-family: 'Courier New', Courier, monospace;
 }
+
 .ddown li:hover{
     background: rgb(85, 84, 84);
 }
+
 .ddown li a{
     list-style:none;
      padding: 26px 30px;
 }
+ 
 .ddown li a{
     text-decoration: none;
     color: white;
     font-size: 20px;
     font-family: 'Ubuntu',sans-serif;
 }
+  
 .ddown li a:hover{
     text-decoration: none;
     color: grey;
-}
+}  
 .rightnav{
     width: 30%;
     text-align: right;
    padding: 0px 23px;
-} 
-#search{
-   padding: 5px;
-    font-size: 17px;
-    border: 2px solid grey;
-     border-radius: 9px;
-}
-
-.btnn {
-    padding: 8px 20px;
-    margin: 8px 3px;
-    border: 2px solid white;
-    border-radius: 8px;
-    font-size: 16.5px;
-    background: none;
-    color: rgba(247, 244, 240, 0.89);
-    cursor: pointer;
-    font-family: 'Ubuntu',sans-serif;
-    font-size: 20px;
 }
 .background{
     background: rgba(0,0,0,0.8);
     background-size: cover;
     background-blend-mode: darken;
+
 }
 
 /*STYLING TOP*/
@@ -191,16 +189,22 @@ html{
 
 .text_centre{
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
     color:#ffffff;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #1dc8c0;
+    width:300px;
+    margin:auto;
+    border-radius: 5px;
 }
 .para{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     font-style: italic;
-    color:rgba(245, 222, 179, 0.95);
+    color:white;
+    background-color: black;
+    border-radius: 10px;
 }
 .offer{
     text-align: center;
